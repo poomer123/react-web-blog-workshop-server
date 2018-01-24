@@ -7,7 +7,9 @@ const myGraphQLSchema = require('./schema')
 // ... define or import your schema here!
 const PORT = 3000;
 
+
 const app = express();
+
 
 // bodyParser is needed just for POST.
 app.use(
@@ -15,5 +17,6 @@ app.use(
     bodyParser.json(),
     ase.graphqlExpress({ schema: myGraphQLSchema })
 );
+
 
 app.listen(PORT);
